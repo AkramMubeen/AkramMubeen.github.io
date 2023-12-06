@@ -702,7 +702,7 @@ main { overflow-x: hidden; }
 
 .project-card .card-title { margin-bottom: 10px; }
 
-.project-card :is(.card-title, .publish-date) {
+.project-card :is(.card-title, .publish-date,.card-text) {
   background: var(--bg-primary);
   padding: 6px 12px;
   width: max-content;
@@ -718,11 +718,21 @@ main { overflow-x: hidden; }
   transition-delay: 0s;
 }
 
-.project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
+.project-card .card-text {
+  margin-bottom: 10px;
+  font-size: var(--fs-5);
+  color: var(--color-primary);;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.project-card:is(:hover, :focus) :is(.card-title, .publish-date, .card-text) {
   transform: translateY(0);
   opacity: 1;
 }
 
+.project-card:is(:hover, :focus) .card-text { transition-delay: 0.1s; }
 .project-card:is(:hover, :focus) .publish-date { transition-delay: 0.1s; }
 
 .load-more {
@@ -731,6 +741,8 @@ main { overflow-x: hidden; }
   text-decoration: underline;
   margin-inline: auto;
 }
+
+
 
 
 
