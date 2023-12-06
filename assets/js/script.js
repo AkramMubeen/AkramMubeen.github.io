@@ -4,6 +4,8 @@
  * element toggle function
  */
 
+document.body.style.zoom="90%"
+
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 
