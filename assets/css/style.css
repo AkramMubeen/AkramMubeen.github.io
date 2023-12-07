@@ -661,6 +661,85 @@ main { overflow-x: hidden; }
 }
 
 
+/*-----------------------------------*\
+ * #CERTIFICATIONS
+\*-----------------------------------*/
+
+.certification { padding-block: var(--section-padding); }
+
+.certification-list > li { margin-bottom: 25px; }
+
+.certification-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-12);
+  box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
+  background: var(--bg-secondary); /* Set background color */
+}
+
+.certification-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: var(--transition-1);
+}
+
+.certification-card:is(:hover, :focus)::after {
+  background: hsla(0, 0%, 100%, 0.1);
+  backdrop-filter: blur(0.5px);
+}
+
+.certification-card .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.certification-card .card-title { margin-bottom: 10px; }
+
+.certification-card :is(.card-title, .publish-date,.card-text) {
+  background: var(--raw-seinna);
+  padding: 6px 12px;
+  width: max-content;
+  box-shadow: var(--shadow-1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: var(--transition-1);
+}
+
+.certification-card .publish-date {
+  font-size: var(--fs-6);
+  color: var(--color-primary);
+  transition-delay: 0s;
+}
+
+.certification-card .card-text {
+  margin-bottom: 10px;
+  font-size: var(--fs-5);
+  color: var(--color-primary);
+  line-height: 1.8;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.certification-card:is(:hover, :focus) :is(.card-title, .publish-date, .card-text) {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.certification-card:is(:hover, :focus) .card-text { transition-delay: 0.1s; }
+.certification-card:is(:hover, :focus) .publish-date { transition-delay: 0.1s; }
+
+.load-more {
+  font-size: var(--fs-4);
+  color: var(--raw-seinna);
+  text-decoration: underline;
+  margin-inline: auto;
+}
+
 
 
 
@@ -952,7 +1031,16 @@ textarea.input-field {
 
   .section-title { max-width: 380px; }
 
+ /**
+   * CERTIFICATION
+   */
 
+   .certification-list {
+    column-count: 2;
+    column-gap: 25px;
+  }
+
+  .certification-list > li:first-child { column-span: all; } 
 
   /**
    * PROJECT
@@ -1263,6 +1351,17 @@ textarea.input-field {
   .skills-toggle { margin-inline: 0; }
 
 
+    /**
+   * CERTIFICATION
+   */
+
+   .certification-list { column-count: 3; }
+
+   .certification-list > li:first-child {
+     column-span: unset;
+     margin: 25px;
+     margin-left: 0;
+   }
 
   /**
    * PROJECT
