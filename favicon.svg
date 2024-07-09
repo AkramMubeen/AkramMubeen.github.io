@@ -1,8 +1,8 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0_71_50)">
     <rect width="100" height="100" rx="10" fill="white"/>
-    <text x="10%" y="60%" font-size="100" font-family="Helvetica" font-weight="bold" fill="#1F1F1F" text-anchor="start" dominant-baseline="middle">A</text>
-    <path d="M65.3491 70.57H87.5691V88.5H65.3491V70.57Z" fill="#E38445"/>
+    <text x="10%" y="60%" font-size="100" font-family="Helvetica" font-weight="bold" fill="#030303" text-anchor="start" dominant-baseline="middle">A</text>
+    <path d="M65.3491 70.57H87.5691V88.5H65.3491V70.57Z" fill="#eea917"/>
   </g>
   <defs>
     <clipPath id="clip0_71_50">

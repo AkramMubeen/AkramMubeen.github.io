@@ -20,8 +20,8 @@
    * colors
    */
 
-  --raw-seinna: hsl(24, 74%, 58%);
-  --sizzling-sunrise: hsl(51, 95%, 54%);
+  --raw-seinna: hsl(41, 86%, 51%);
+  --sizzling-sunrise: hsl(216, 98%, 37%);
   --scarlet: hsl(13, 96%, 47%);
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
@@ -76,12 +76,12 @@
 
 body.dark_theme {
 
-  --bg-primary: hsl(0, 0%, 12%);
-  --bg-secondary: hsl(0, 0%, 19%);
-  --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(0, 0%, 62%);
+  --bg-primary:hsl(180, 100%, 15%);
+  --bg-secondary: 	hsl(180, 100%, 20%);
+  --color-primary: hsl(0, 0%, 0%);
+  --color-secondary: 	hsl(180, 33%, 77%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
-  --input-bg: hsl(0, 0%, 16%);
+  --input-bg: 	hsl(180, 100%, 25%);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
 
@@ -89,12 +89,12 @@ body.dark_theme {
 
 body.light_theme {
 
-  --bg-primary: hsl(0, 0%, 90%);
-  --bg-secondary: hsl(0, 0%, 100%);
-  --color-primary: hsl(0, 0%, 12%);
-  --color-secondary: hsl(0, 0%, 37%);
+  --bg-primary:	hsl(213, 54%, 16%);
+  --bg-secondary: hsl(222, 100%, 13%);
+  --color-primary:hsl(216, 90%, 67%) 	;	
+  --color-secondary: 	hsl(196, 33%, 61%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
-  --input-bg: hsl(0, 0%, 93%);
+  --input-bg: 	hsl(216, 98%, 37%);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
 
@@ -782,7 +782,7 @@ main { overflow-x: hidden; }
 .project-card .card-title { margin-bottom: 10px; }
 
 .project-card :is(.card-title, .publish-date,.card-text) {
-  background: var(--bg-primary);
+  background: var(--raw-seinna);
   padding: 6px 12px;
   width: max-content;
   box-shadow: var(--shadow-1);
@@ -917,6 +917,10 @@ main { overflow-x: hidden; }
   padding-left: 40px;
   border-radius: var(--radius-12);
   transition: var(--transition-1);
+}
+
+.input-field::placeholder {
+  color: var(--bg-primary);
 }
 
 .input-wrapper ion-icon {
