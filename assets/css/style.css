@@ -79,6 +79,7 @@ body.dark_theme {
   --bg-primary:hsl(180, 100%, 15%);
   --bg-secondary: 	hsl(180, 100%, 20%);
   --color-primary: hsl(0, 0%, 0%);
+  --color-tertiary: hsl(0, 0%, 0%);
   --color-secondary: 	hsl(180, 33%, 77%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: 	hsl(180, 100%, 25%);
@@ -91,9 +92,10 @@ body.light_theme {
 
   --bg-primary:	hsl(213, 54%, 16%);
   --bg-secondary: hsl(222, 100%, 13%);
-  --color-primary:hsl(216, 90%, 67%) 	;	
+  --color-primary:hsl(216, 90%, 67%) 	;
+  --color-tertiary: hsl(0, 0%, 0%);	
   --color-secondary: 	hsl(196, 33%, 61%);
-  --card-shadow: hsla(0, 0%, 0%, 0.1);
+  --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: 	hsl(216, 98%, 37%);
 
   --shadow-1: 10px 10px 40px var(--card-shadow);
@@ -490,10 +492,82 @@ main { overflow-x: hidden; }
 
 .hero .btn-primary { margin-inline: auto; }
 
+/*-----------------------------------*\
+ * # IMAGE DIVS
+\*-----------------------------------*/
 
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  height: 100px; /* Adjust height as needed */
+}
 
+.image-container img {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  object-fit: cover;
+  object-position: -0px -385px; /* Adjust the position to display the blue section */
+}
 
+.image-container-setup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  height: 100px; /* Adjust height as needed */
+}
 
+.image-container-setup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -0px -320px; /* Adjust the position to display the blue section */
+}
+
+.image-container-robot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  height: 100px; /* Adjust height as needed */
+}
+
+.image-container-robot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -0px -120px; /* Adjust the position to display the blue section */
+}
+
+.image-container-med {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-1);
+  position: relative;
+  height: 150px; /* Adjust height as needed */
+}
+
+.image-container-med img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: -0px -220px; /* Adjust the position to display the blue section */
+}
 /*-----------------------------------*\
  * #STATS
 \*-----------------------------------*/
@@ -687,7 +761,7 @@ main { overflow-x: hidden; }
 
 .certification-card:is(:hover, :focus)::after {
   background: hsla(0, 0%, 100%, 0.1);
-  backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.2px);
 }
 
 .certification-card .card-content {
@@ -707,19 +781,20 @@ main { overflow-x: hidden; }
   box-shadow: var(--shadow-1);
   transform: translateY(20px);
   opacity: 0;
+  color:var(--color-tertiary);
   transition: var(--transition-1);
 }
 
 .certification-card .publish-date {
   font-size: var(--fs-6);
-  color: var(--color-primary);
+  color: var(--color-tertiary);
   transition-delay: 0s;
 }
 
 .certification-card .card-text {
   margin-bottom: 10px;
   font-size: var(--fs-5);
-  color: var(--color-primary);
+  color: var(--color-tertiary);
   line-height: 1.8;
   overflow-wrap: break-word;
   white-space: normal;
@@ -768,7 +843,7 @@ main { overflow-x: hidden; }
 
 .project-card:is(:hover, :focus)::after {
   background: hsla(0, 0%, 100%, 0.1);
-  backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.2px);
 }
 
 .project-card .card-content {
@@ -784,6 +859,7 @@ main { overflow-x: hidden; }
 .project-card :is(.card-title, .publish-date,.card-text) {
   background: var(--raw-seinna);
   padding: 6px 12px;
+  color:var(--color-tertiary);
   width: max-content;
   box-shadow: var(--shadow-1);
   transform: translateY(20px);
@@ -793,14 +869,14 @@ main { overflow-x: hidden; }
 
 .project-card .publish-date {
   font-size: var(--fs-6);
-  color: var(--color-primary);
+  color: var(--color-tertiary);
   transition-delay: 0s;
 }
 
 .project-card .card-text {
   margin-bottom: 10px;
   font-size: var(--fs-5);
-  color: var(--color-primary);;
+  color: var(--color-tertiary);;
   line-height: 1.8;
   overflow-wrap: break-word;
   white-space: normal;
